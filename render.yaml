@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: scan-desk-ocr-backend
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
